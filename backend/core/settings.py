@@ -126,7 +126,9 @@ SIMPLE_JWT = {
     'AUTH_HEADER_TYPES': ('Bearer',),
 }
 
-CORS_ALLOWED_ORIGINS = True
+CORS_ALLOWED_ORIGINS = [
+    "https://qrattendance-1-xos0.onrender.com",
+]
 CORS_ALLOW_CREDENTIALS = True
 
 
