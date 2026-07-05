@@ -127,6 +127,7 @@ SIMPLE_JWT = {
 }
 
 CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5173",
     "https://qrattendance-1-xos0.onrender.com",
 ]
 CORS_ALLOW_CREDENTIALS = True
