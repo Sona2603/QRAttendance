@@ -33,19 +33,19 @@ ALLOWED_HOSTS = config(
     default=".onrender.com,localhost,127.0.0.1"
 ).split(",")
 
-THIRD_PARTY_APPS = [
-    'rest_framework',
-    'rest_framework_simplejwt',
-    'corsheaders',
-    'django_filters',
-    'channels',
-]
 
 LOCAL_APPS = [
     'apps.authentication',
     'apps.departments',
     'apps.classrooms',
     'apps.attendance',
+]
+
+THIRD_PARTY_APPS = [
+    'rest_framework',
+    'rest_framework_simplejwt',
+    'corsheaders',
+    'django_filters',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -80,7 +80,7 @@ TEMPLATES = [
     },
 ]
 
-ASGI_APPLICATION = 'core.asgi.application'
+
 
 
 AUTH_PASSWORD_VALIDATORS = [
@@ -131,11 +131,6 @@ CORS_ALLOWED_ORIGINS = [
 ]
 CORS_ALLOW_CREDENTIALS = True
 
-CHANNEL_LAYERS = {
-    'default': {
-        'BACKEND': 'channels.layers.InMemoryChannelLayer',
-    }
-}
 
 STATIC_URL = "static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
